@@ -54,9 +54,9 @@ const GlobalStyles = createGlobalStyle`
     body {
     font-weight: 300;
     font-family: 'Source Sans Pro', sans-serif;
-    color:black;
+    color: rgba(255,255,255,1);
     line-height: 1.2;
-    
+    background-color: rgba(0,0,0,1);
     }
     a {
     text-decoration:none;
