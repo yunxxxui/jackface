@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    position: sticky;
-    position: -webkit-sticky;
 
-    top:0px;
+    position: sticky;
     z-index: 1;
+
+    top: 0;
 
     display: flex;
     flex-direction: column;
@@ -13,11 +13,17 @@ const Container = styled.div`
     align-items: center;
 
     width: 100%;
-    overflow: scroll;
     height: 96px;
     background-color: rgba(0,0,0,0.8);
     backdrop-filter: blur(24px);
     border-bottom: 0.2px solid rgba(255,255,255,0.2);
+
+    overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     font-size: 12px;
 
@@ -39,7 +45,8 @@ const Item = styled.span`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 24px;
+    margin-right: 32px;
+    opacity: 0.5;
     &:last-child {
         margin-right: 0;
     }
@@ -47,12 +54,13 @@ const Item = styled.span`
 
 const Name = styled.span`
     min-width:65px;
-    display: none;
+    display: block;
 `;
 
 
 function Category() {
-  return <Container>
+  return <>
+    <Container>
         <Frame>
             <Item>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +106,8 @@ function Category() {
                 <Name>사물 및 기호</Name>
             </Item>         
         </Frame>  
-    </Container>;
+    </Container>
+    </>
 }
 
 export default Category;

@@ -9,7 +9,7 @@ const Container = styled.div`
 const MainBanner = styled.div`
   width: 100%;
   height: 720px;
-  background-color: gray;
+  background-color: teal;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,7 +51,7 @@ const SubTitle = styled.p`
 
 function Home() {
   return <>
-    <Category /> 
+    <Category />
     <Container>
       <MainBanner>
         <Title>
@@ -63,7 +63,7 @@ function Home() {
         </SubTitle>
       </MainBanner>
       home
-    </Container>
+    </Container> 
   </>;
 }
 
