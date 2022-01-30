@@ -3,31 +3,49 @@ import Category from "../Components/Category";
 
 const Container = styled.div`
   margin-top:-152px;
-  height: 200vh;
+  height: 500vh;
 `;
 
 const MainBanner = styled.div`
   width: 100%;
   height: 720px;
-  background-color: red;
-
+  background-color: gray;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  word-break: keep-all;
+
+  @media only screen and (max-width: 700px){
+    height: 480px;
+  }
 `;
 
 const Title = styled.p`
   font-size: 96px;
   font-weight: bold;
-  margin-top: 104px;
+  margin-top: 120px;
   margin-bottom: 24px;
   text-align: center;
+
+  @media only screen and (max-width: 1080px){
+    font-size: 64px;
+  }
+
+  @media only screen and (max-width: 700px){
+    margin-top: 136px;
+    font-size: 32px;
+  }
 `;
 
 const SubTitle = styled.p`
   font-size: 24px;
   font-weight: bold;
+
+  @media only screen and (max-width: 700px){
+    font-size: 16px;
+  }
 `;
 
 
