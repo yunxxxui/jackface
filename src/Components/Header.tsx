@@ -7,7 +7,7 @@ const Container = styled.header<{menuOpen : boolean}>`
     display: flex;
     justify-content: center;
     align-items: center;
-    position:  ${(props) => props.menuOpen ? "fixed" : "absoulte" };
+    position:  ${(props) => props.menuOpen ? "fixed" : "relative" };
     top:0;
     width: 100%;
     
@@ -16,7 +16,7 @@ const Container = styled.header<{menuOpen : boolean}>`
     border-bottom: 1px solid rgba(255,255,255,0.2);
 
     font-size:12px;
-    z-index: 10;
+    z-index: 1000;
 `;
 
 
@@ -37,17 +37,16 @@ const Box = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
 `;
 
 const Logo = styled.svg`
     margin-right: 8px;
-    z-index: 100;
+    z-index: 1002;
 `;
 
 const Title = styled.span`
     font-size: 16px;
-    z-index: 100;
+    z-index: 1002;
 `;
 
 const Bold = styled.span`
@@ -66,11 +65,11 @@ const Items = styled.ul<{menuOpen : boolean}>`
         top: 0;
         right: 0;
         position: fixed;
-        z-index: 99;
+        z-index: 1001;
         width: 100vw;
         height: 100vh;
 
-        padding: 32px;
+        padding: 24px;
         padding-top: 48px;
 
         background-color: black;
@@ -95,13 +94,14 @@ const Item = styled.li`
 `
 
 const SearchBtn = styled.button`
-
+    cursor: pointer;
     background: none;
     border: none;
     outline: inherit;
 `;
 
 const MenuBtn = styled.button`
+    cursor: pointer;
     display: none;
     background: none;
     border: none;
@@ -123,7 +123,7 @@ const SearchBar = styled(motion.div)`
 
     @media only screen and (max-width: 700px){
         margin-top: 104px;
-        z-index: 100;
+        z-index: 1002;
         padding: 16px;
     }
 `;
@@ -140,6 +140,7 @@ const SearchInput = styled.input`
     font-size: 16px;
 
     @media only screen and (max-width: 700px){
+        max-width: none;
         height: 40px;
         border: none;
         padding: 24px;
@@ -150,6 +151,7 @@ const SearchInput = styled.input`
 `;
 
 const SearchIcon = styled.svg`
+    cursor: pointer;
     position: relative;
     left: 24px;
     opacity: 0.2;
@@ -159,11 +161,12 @@ const SearchIcon = styled.svg`
 `;
 
 const CloseIcon = styled.svg`
+    cursor: pointer;
     display: flex;
     position: relative;
     right: 16px;
     @media only screen and (max-width: 700px){
-        z-index: 100;
+        z-index: 1002;
         right: 8px;
     }
 `;
@@ -173,7 +176,7 @@ const CloseIcon = styled.svg`
 
 const navBarAnime = {
     initial: {
-        opacity: 0,
+        opacity: 1,
         x:0,
     },
     visible: {
@@ -252,7 +255,7 @@ function Header() {
                     {menuOpen ?
                         <Item>
                             <SearchInput
-                                placeholder="Q 검색해서 원하는 이모지를 찾아보세요."
+                                placeholder="Q 키워드 검색"
                             />
                         </Item>
                     : null}

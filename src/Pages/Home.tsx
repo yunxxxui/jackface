@@ -1,32 +1,74 @@
 import styled from "styled-components";
 import Category from "../Components/Category";
 
+import BGimg from "../img/BG.png"
+
 const Container = styled.div`
   margin-top:-152px;
-  height: 500vh;
+  height: 5000vh;
 `;
 
 const MainBanner = styled.div`
+  position: absolute;
+  z-index: -1;
   width: 100%;
   height: 720px;
-  background-color: teal;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
-  word-break: keep-all;
+  background: url(${BGimg});
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 724px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 90%);
+
+    @media only screen and (max-width: 700px){
+      background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%);
+      height: 480px;
+    }
+  }
+  
 
   @media only screen and (max-width: 700px){
     height: 480px;
   }
 `;
 
+const Copy = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 240px;
+  padding-bottom: 40px;
+
+  word-break: keep-all;
+  word-wrap: break-word;
+
+  @media only screen and (max-width: 1080px){
+    padding-top: 200px;
+    padding-bottom: 40px;
+  }
+
+  @media only screen and (max-width: 700px){
+    padding-top: 120px;
+    padding-bottom: 40px;
+  }
+`;
+
 const Title = styled.p`
   font-size: 96px;
   font-weight: bold;
-  margin-top: 120px;
-  margin-bottom: 24px;
   text-align: center;
 
   @media only screen and (max-width: 1080px){
@@ -48,21 +90,119 @@ const SubTitle = styled.p`
   }
 `;
 
+const MainSection = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Frame = styled.div`
+  width: 100%;
+  overflow: hidden;
+  max-width: 1256px;
+  margin: 0 auto;
+  padding: 24px;
+
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  position: absolute;
+  
+
+  @media only screen and (min-width: 500px){
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+  }
+  @media only screen and (min-width: 1050px){
+    grid-template-columns: repeat(4, 1fr);
+  }
+`;
+
+const Box = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #161616;
+  border-radius: 8px;
+  min-height: 120px;
+
+  img {
+    width: 100%;
+    @media only screen and (min-width: 800px){
+      max-width: 240px;
+      max-height: 240px;
+    }
+    
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: bold;
+    @media only screen and (min-width: 800px){
+      font-size: 16px;
+    }
+  }
+`;
+
 
 function Home() {
   return <>
     <Category />
     <Container>
-      <MainBanner>
-        <Title>
-          <p>300개가 넘는 이모지.</p>
-          <p>이 모든 것이 모두 무료.</p>
-        </Title>
-        <SubTitle>
-          Designed by YUNXXX
-        </SubTitle>
-      </MainBanner>
-      home
+      <MainBanner />
+
+      <Copy>
+          <Title>
+            <p>300개가 넘는 이모지.</p>
+            <p>이 모든 것이 모두 무료.</p>
+          </Title>
+          <SubTitle>
+            Designed by YUNXXX
+          </SubTitle>
+      </Copy>
+
+      <MainSection>
+        <Frame>
+          <Box>
+            <a href="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y">
+              <img src="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y" alt="" />
+              <span>삐에로 얼굴</span>
+            </a>
+          </Box>
+          <Box>
+            <a href="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y">
+              <img src="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y" alt="" />
+              <span>삐에로 얼굴</span>
+            </a>
+          </Box>
+          <Box>
+            <a href="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y">
+              <img src="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y" alt="" />
+              <span>삐에로 얼굴</span>
+            </a>
+          </Box>
+          <Box>
+            <a href="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y">
+              <img src="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y" alt="" />
+              <span>삐에로 얼굴</span>
+            </a>
+          </Box>
+          <Box>
+            <a href="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y">
+              <img src="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y" alt="" />
+              <span>삐에로 얼굴</span>
+            </a>
+          </Box>
+          {[...Array(499)].map((i) => (
+                  <Box key={i}>{i}</Box>
+          ))}
+          
+        </Frame>
+      </MainSection>
     </Container> 
   </>;
 }

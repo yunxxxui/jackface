@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Search from "./Pages/Search";
+import Share from "./Pages/Share";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/search"element={<Search/>}/>
+        <Route path="/share"element={<Share/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/" element={<Home/>}/>
       </Routes>
