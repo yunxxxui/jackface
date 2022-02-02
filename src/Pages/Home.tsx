@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Category from "../Components/Category";
 
+import {emojisData} from "../Data/emojisData";
+
 import BGimg from "../img/BG.png"
 
 const Container = styled.div`
@@ -120,6 +122,7 @@ const Frame = styled.div`
 
 const Box = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #161616;
@@ -149,7 +152,11 @@ const Box = styled.div`
 `;
 
 
+
+
 function Home() {
+  console.log(emojisData)
+
   return <>
     <Category />
     <Container>
@@ -197,9 +204,17 @@ function Home() {
               <span>삐에로 얼굴</span>
             </a>
           </Box>
-          {[...Array(499)].map((i) => (
+          {emojisData.map(emoji =>
+            <Box key={emoji.id}>
+              <a href={emoji.download_link}>
+                <img src={emoji.thumnail_img_src} alt="emoji tumnail" />
+                <span>{emoji.KOR_title}</span>
+              </a>
+            </Box>
+          )}
+          {/* {[...Array(499)].map((i) => (
                   <Box key={i}>{i}</Box>
-          ))}
+          ))} */}
           
         </Frame>
       </MainSection>
