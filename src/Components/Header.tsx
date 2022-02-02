@@ -252,16 +252,16 @@ function Header() {
                 <Items
                     menuOpen={menuOpen}
                 >
-                    {menuOpen ?
+                    {/* {menuOpen ?
                         <Item>
                             <SearchInput
                                 placeholder="Q 키워드 검색"
                             />
                         </Item>
-                    : null}
+                    : null} */}
                     <Item><Link to="about">소개</Link></Item>
                     <Item><Link to="share">공유</Link></Item>
-                    <Item><a href="https://drive.google.com/drive/folders/1RMM5xaH7VIMiYo5DpWGPC3bjSfpQ61Dw?usp=sharing" target="_blank" rel="noreferrer">통합 다운로드</a></Item>
+                    <Item><a href="https://drive.google.com/drive/folders/1BGGXdGj1TmxgzB9buOcw4V0sUdixKIZo?usp=sharing" target="_blank" rel="noreferrer">통합 다운로드</a></Item>
                     {menuOpen ? null :
                         <Item>
                             <SearchBtn

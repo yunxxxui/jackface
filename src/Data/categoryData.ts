@@ -39,7 +39,7 @@ export const mainCateory: ICategory[] = [
     },
 ]
 
-//메인 카테고리01_ 서브 카테고리
+//메인 카테고리01/서브 카테고리
 export const main01_subCategory: ICategory[] = [
     {
       id: 10001,

@@ -72,6 +72,7 @@ const Title = styled.p`
   font-size: 96px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 24px;
 
   @media only screen and (max-width: 1080px){
     font-size: 64px;
@@ -142,7 +143,7 @@ const Box = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     font-size: 12px;
     font-weight: bold;
     @media only screen and (min-width: 800px){
@@ -164,50 +165,22 @@ function Home() {
 
       <Copy>
           <Title>
-            <p>300개가 넘는 이모지.</p>
+            <p>88개가 넘는 이모지.</p>
             <p>이 모든 것이 모두 무료.</p>
           </Title>
           <SubTitle>
-            Designed by YUNXXX
+            - 현재 구직 중인 이윤규 드림 -
           </SubTitle>
       </Copy>
 
       <MainSection>
         <Frame>
-          <Box>
-            <a href="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y">
-              <img src="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y" alt="" />
-              <span>삐에로 얼굴</span>
-            </a>
-          </Box>
-          <Box>
-            <a href="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y">
-              <img src="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y" alt="" />
-              <span>삐에로 얼굴</span>
-            </a>
-          </Box>
-          <Box>
-            <a href="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y">
-              <img src="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y" alt="" />
-              <span>삐에로 얼굴</span>
-            </a>
-          </Box>
-          <Box>
-            <a href="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y">
-              <img src="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y" alt="" />
-              <span>삐에로 얼굴</span>
-            </a>
-          </Box>
-          <Box>
-            <a href="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y">
-              <img src="https://docs.google.com/uc?export=download&id=1tKRaxfaAIugh0P-xSFqHEMsUil7_eg-Y" alt="" />
-              <span>삐에로 얼굴</span>
-            </a>
-          </Box>
           {emojisData.map(emoji =>
             <Box key={emoji.id}>
               <a href={emoji.download_link}>
                 <img src={emoji.thumnail_img_src} alt="emoji tumnail" />
+                <span>{emoji.id}</span>
+                <span>{emoji.sub_category.KOR_title}</span>
                 <span>{emoji.KOR_title}</span>
               </a>
             </Box>
