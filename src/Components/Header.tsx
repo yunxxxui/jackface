@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Link, Navigate, useNavigate } from "react-router-dom"
+import {Link, useNavigate } from "react-router-dom"
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
