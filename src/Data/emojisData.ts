@@ -9,7 +9,7 @@ const downloadImgSrc = "https://docs.google.com/uc?export=download&id="
 // 
 
 //데이터 선언
-interface IEmojisData {
+export interface IEmojisData {
   id: number,
   main_category: {
     id: number,
@@ -40,7 +40,7 @@ export const emojisData:IEmojisData[]= [
       thumnail_img_src: `${viewImgSrc}16WzNbzTkdHYZ97pKq54mSjR-Lp2avC5X`,
       orginal_img_Src: `${viewImgSrc}1MA_921lb7EEjyoNQP58sqDAvko6R4acE`,
       download_link: `${downloadImgSrc}1MA_921lb7EEjyoNQP58sqDAvko6R4acE`,
-      tag: ["미소","스마일","얼굴","웃음","활짝 웃는 얼굴","face","grin","grinning face"]
+      tag: ["미소","smile"]
     },
     {
       id: 2,
@@ -51,7 +51,7 @@ export const emojisData:IEmojisData[]= [
       thumnail_img_src: `${viewImgSrc}1S66OR3wdsBGETiyKYVM0Rn7t9fDqSelf`,
       orginal_img_Src: `${viewImgSrc}1MxWhmA815V90LbYYtPibw_GM899bd2mB`,
       download_link: `${downloadImgSrc}1MxWhmA815V90LbYYtPibw_GM899bd2mB`,
-      tag: ["미소","미소 짓는 눈으로 활짝 웃는 얼굴","스마일","얼굴","입 벌리고 웃는 눈웃음 얼굴","eye","face","grinning face with smiling eyes","mouth","open","smile"]
+      tag: ["미소","smile"]
     },
     {
       id: 3,
@@ -300,7 +300,7 @@ export const emojisData:IEmojisData[]= [
       thumnail_img_src: `${viewImgSrc}1yIGPDV9o7DIsi0uEW05P0lmmAmz987XL`,
       orginal_img_Src: `${viewImgSrc}1SmppHWr8ugdtkTWQ0ltuRsXDWjolzXbn`,
       download_link: `${downloadImgSrc}1SmppHWr8ugdtkTWQ0ltuRsXDWjolzXbn`,
-      tag: ["중립","무표정","netural"]
+      tag: ["무표정","netural"]
     },
     {
       id: 25,
@@ -311,7 +311,7 @@ export const emojisData:IEmojisData[]= [
       thumnail_img_src: `${viewImgSrc}1HiIYhFSNDsEeTl7fYjESdNhZIEKvmpdG`,
       orginal_img_Src: `${viewImgSrc}y3Z3x0hjKUpLr7HAnGB6GU73Xod9PSxR`,
       download_link: `${downloadImgSrc}y3Z3x0hjKUpLr7HAnGB6GU73Xod9PSxR`,
-      tag: ["중립","무표정","netural"]
+      tag: ["무표정","netural"]
     },
     {
       id: 26,
@@ -322,7 +322,7 @@ export const emojisData:IEmojisData[]= [
       thumnail_img_src: `${viewImgSrc}17z_QnjyJ_hiv-G0mSgXT-hMSRbaEAk_8`,
       orginal_img_Src: `${viewImgSrc}1fczZHwaPZDQ3LGSY8Fd6YHSfl3DTJIH5`,
       download_link: `${downloadImgSrc}1fczZHwaPZDQ3LGSY8Fd6YHSfl3DTJIH5`,
-      tag: ["중립","무표정","netural"]
+      tag: ["무표정","netural"]
     },
     {
       id: 27,
@@ -333,7 +333,7 @@ export const emojisData:IEmojisData[]= [
       thumnail_img_src: `${viewImgSrc}1IogGCOSfjAXdnkcKQwz3mrVtP1pzlSvs`,
       orginal_img_Src: `${viewImgSrc}19_zEJbnum8YtzDE70wyxNKDDEcXP6u9n`,
       download_link: `${downloadImgSrc}19_zEJbnum8YtzDE70wyxNKDDEcXP6u9n`,
-      tag: ["중립","무표정","netural"]
+      tag: ["무표정","netural"]
     },
     {
       id: 28,
@@ -344,7 +344,7 @@ export const emojisData:IEmojisData[]= [
       thumnail_img_src: `${viewImgSrc}1bvEC5jkJm6a8_DlmkFzeg7c4hoQOudIy`,
       orginal_img_Src: `${viewImgSrc}1BsRoeJ95CkxRQIFPYu0dAf6ZgzBj-18k`,
       download_link: `${downloadImgSrc}1BsRoeJ95CkxRQIFPYu0dAf6ZgzBj-18k`,
-      tag: ["중립","무표정","netural"]
+      tag: ["무표정","netural"]
     },
     {
       id: 29,
@@ -355,7 +355,7 @@ export const emojisData:IEmojisData[]= [
       thumnail_img_src: `${viewImgSrc}1ISrqMrpA7AGgURn4Y5gNPOnNaRbzNG0s`,
       orginal_img_Src: `${viewImgSrc}18QppoYTIKA1fIXXXtIt1a67y2uYQy2a-`,
       download_link: `${downloadImgSrc}18QppoYTIKA1fIXXXtIt1a67y2uYQy2a-`,
-      tag: ["중립","무표정","netural"]
+      tag: ["무표정","netural"]
     },
     {
       id: 30,
@@ -366,7 +366,7 @@ export const emojisData:IEmojisData[]= [
       thumnail_img_src: `${viewImgSrc}1sgM8M8A5FNoHrTY9EYugmIMswZP6ADTI`,
       orginal_img_Src: `${viewImgSrc}1mpuCmpbD6071BFPaGxYn04oM3RJjV6C`,
       download_link: `${downloadImgSrc}1mpuCmpbD6071BFPaGxYn04oM3RJjV6C`,
-      tag: ["중립","무표정","netural"]
+      tag: ["무표정","netural"]
     },
     {
       id: 31,
@@ -377,7 +377,7 @@ export const emojisData:IEmojisData[]= [
       thumnail_img_src: `${viewImgSrc}1rrYTyZEsNz7Lh2Sijvk3FDlAKAkNdEjG`,
       orginal_img_Src: `${viewImgSrc}1uuwmFojFKIj6-A2n5VCXKbHHpzISJs9S`,
       download_link: `${downloadImgSrc}1uuwmFojFKIj6-A2n5VCXKbHHpzISJs9S`,
-      tag: ["중립","무표정","netural"]
+      tag: ["무표정","netural"]
     },
     {
       id: 32,
@@ -388,7 +388,7 @@ export const emojisData:IEmojisData[]= [
       thumnail_img_src: `${viewImgSrc}13sX8mM-u6i6vMCaa7XMugget5mViz-dE`,
       orginal_img_Src: `${viewImgSrc}1yS_6rgzWfI96bILj_oH213o3r5Janjg7`,
       download_link: `${downloadImgSrc}1yS_6rgzWfI96bILj_oH213o3r5Janjg7`,
-      tag: ["중립","무표정","netural"]
+      tag: ["무표정","netural"]
     },
     {
       id: 33,
@@ -399,7 +399,7 @@ export const emojisData:IEmojisData[]= [
       thumnail_img_src: `${viewImgSrc}1OTAfIweWrFOGURpyGo2LugWYAE3AEZtL`,
       orginal_img_Src: `${viewImgSrc}1JGbguR3Y5UPnCvxBFJ_rJMjzYcTSStM1`,
       download_link: `${downloadImgSrc}1JGbguR3Y5UPnCvxBFJ_rJMjzYcTSStM1`,
-      tag: ["중립","무표정","netural"]
+      tag: ["무표정","netural"]
     },
     //01_표정과사람/06_얼굴-졸린
     {

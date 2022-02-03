@@ -185,6 +185,26 @@ const ToolTip = styled(motion.span)`
   text-align: center;
 `
 
+const Tag = styled(motion.div)`
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: -48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  span {
+    margin: 4px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    color: black;
+    font-size: 12px;
+  }
+`
+
 //애니메이션
 
 const boxAnime = {
@@ -219,6 +239,26 @@ const clickAnime = {
     y: 0,
     transition: {
       delay: 0.2,
+      duration: 0.2,
+      type: "tween"
+    }
+  }
+}
+
+const tagAnime = {
+  init: {
+    opacity: 0,
+    scale: 0,
+    x: "-50%",
+    y: 8,
+  },
+  hover: {
+    opacity: 1,
+    scale: 1,
+    x: "-50%",
+    y: 0,
+    transition: {
+      delay: 0.6,
       duration: 0.2,
       type: "tween"
     }
@@ -290,6 +330,7 @@ function Home() {
               onClick={checkCopy}
             >
               <a href={emoji.download_link} data-scroll={emoji.sub_category.KOR_title}>
+                <Tag variants={tagAnime}>{emoji.tag?.map(data => <span>{data}</span>)}</Tag>
                 <motion.img layout src={emoji.thumnail_img_src} alt="emoji tumnail" />
                 <Click variants={clickAnime}>다운로드</Click>
               </a>              
@@ -302,7 +343,7 @@ function Home() {
           >
             <Link to="about" onClick={scrollToTop}>
               반응 좋으면
-              <Click variants={clickAnime}>소개 페이지로</Click>
+              <Click variants={clickAnime}>더 알아보기</Click>
             </Link>
           </Box>
           <Box 
@@ -312,7 +353,7 @@ function Home() {
           >
             <Link to="about" onClick={scrollToTop}>
               더 만들겠습니다.
-              <Click variants={clickAnime}>소개 페이지로</Click> 
+              <Click variants={clickAnime}>더 알아보기</Click> 
             </Link>
           </Box>
           <Box 
@@ -322,7 +363,7 @@ function Home() {
           >
             <Link to="about" onClick={scrollToTop}>
               100개 더!
-              <Click variants={clickAnime}>소개 페이지로</Click>
+              <Click variants={clickAnime}>더 알아보기</Click>
             </Link>
           </Box>
         </Frame>
