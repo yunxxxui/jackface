@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom"
 import Header from "./Components/Header";
 import ToTop from "./Components/ToTop";
 import About from "./Pages/About";
@@ -11,10 +11,17 @@ function App() {
     <Router>
       <Header/>
       <Routes>
+        
         <Route path="/search"element={<Search/>}/>
         <Route path="/share"element={<Share/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/" element={<Home/>}/>
+        
+        <Route
+          path="*"
+          element={<Navigate to="/"/>}
+         />
+
       </Routes>
       <ToTop/>
     </Router>
