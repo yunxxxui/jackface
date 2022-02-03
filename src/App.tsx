@@ -12,14 +12,14 @@ function App() {
       <Header/>
       <Routes>
         
-        <Route path="/jackface/search"element={<Search/>}/>
-        <Route path="/jackface/share"element={<Share/>}/>
-        <Route path="/jackface/about" element={<About/>}/>
-        <Route path="/jackface" element={<Home/>}/>
+        <Route path="/search"element={<Search/>}/>
+        <Route path="/share"element={<Share/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/" element={<Home/>}/>
         
         <Route
           path="*"
-          element={<Navigate to="/jackface"/>}
+          element={<Navigate to="/"/>}
          />
 
       </Routes>
