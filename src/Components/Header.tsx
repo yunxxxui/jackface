@@ -3,11 +3,11 @@ import {Link} from "react-router-dom"
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Container = styled.header<{menuOpen : boolean}>`
+const Container = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-    position:  ${(props) => props.menuOpen ? "fixed" : "relative" };
+    position:  fixed;
     top:0;
     width: 100%;
     
@@ -63,7 +63,7 @@ const Items = styled.ul<{menuOpen : boolean}>`
         flex-direction: column;
         justify-content: start;
         top: 0;
-        right: 0;
+        left: 0;
         position: fixed;
         z-index: 1001;
         width: 100vw;
@@ -92,6 +92,18 @@ const Item = styled.li`
         border-bottom: 1px solid rgba(255,255,255,0.2);
     }
 `
+const MobileBtn = styled.div`
+    display: none;
+    @media only screen and (max-width: 700px){
+        display: block;
+    }
+`
+
+const MobileHidden = styled.div`
+    @media only screen and (max-width: 700px){
+        display:none;
+    }
+`
 
 const SearchBtn = styled.button`
     cursor: pointer;
@@ -102,30 +114,22 @@ const SearchBtn = styled.button`
 
 const MenuBtn = styled.button`
     cursor: pointer;
-    display: none;
     background: none;
     border: none;
     outline: inherit;
-
-    @media only screen and (max-width: 700px){
-        display: block;
-    }
+    margin-left: 16px;
 `;
 
 // 검색창
 const SearchBar = styled(motion.div)`
     position: absolute;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
     max-width: 960px;
-
-    @media only screen and (max-width: 700px){
-        margin-top: 104px;
-        z-index: 1002;
-        padding: 16px;
-    }
 `;
 
 const SearchInput = styled.input`
@@ -138,16 +142,6 @@ const SearchInput = styled.input`
     padding: 0 40px;
     color: white;
     font-size: 16px;
-
-    @media only screen and (max-width: 700px){
-        max-width: none;
-        height: 40px;
-        border: none;
-        padding: 24px;
-        color: white;
-        background-color: rgba(255,255,255,0.2);
-        border-radius: 8px;
-    }
 `;
 
 const SearchIcon = styled.svg`
@@ -155,19 +149,15 @@ const SearchIcon = styled.svg`
     position: relative;
     left: 24px;
     opacity: 0.2;
-    @media only screen and (max-width: 700px){
-        left: -16px;
-    }
 `;
 
 const CloseIcon = styled.svg`
     cursor: pointer;
     display: flex;
     position: relative;
-    right: 16px;
+    right: 24px;
     @media only screen and (max-width: 700px){
         z-index: 1002;
-        right: 8px;
     }
 `;
 
@@ -211,24 +201,24 @@ const searchBarAnime = {
     },
     hidden: {
         opacity: 0,
+        x: 100,
     }
 
 }
+
 
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
         setMenuOpen((prev)=>!prev)
-        console.log(menuOpen)
     }
-
     const [searchOpen, setSearchOpen] = useState(false);
     const toggleSearch = () => {
         setSearchOpen((prev)=>!prev)
-        console.log(searchOpen)
     }
-  return <Container menuOpen={menuOpen}>
+
+  return <Container>
         <NavBar
             variants={navBarAnime}
             initial="initial"
@@ -252,18 +242,39 @@ function Header() {
                 <Items
                     menuOpen={menuOpen}
                 >
-                    {/* {menuOpen ?
+                    <Item>
+                        <Link to="about" onClick={toggleMenu}>소개</Link>
+                    </Item>
+                    <Item><a href="https://drive.google.com/drive/folders/1BGGXdGj1TmxgzB9buOcw4V0sUdixKIZo?usp=sharing" target="_blank" rel="noreferrer" onClick={toggleMenu}>통합 다운로드</a></Item>
+                    <MobileHidden>
                         <Item>
-                            <SearchInput
-                                placeholder="Q 키워드 검색"
-                            />
+                            <Link to="/">
+                                <SearchBtn
+                                    onClick={toggleSearch}
+                                >
+                                    <motion.svg
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.3187 20.0273L15.232 13.9406C16.1766 12.7195 16.6875 11.2266 16.6875 9.65625C16.6875 7.77656 15.9539 6.01406 14.6273 4.68516C13.3008 3.35625 11.5336 2.625 9.65625 2.625C7.77891 2.625 6.01172 3.35859 4.68516 4.68516C3.35625 6.01172 2.625 7.77656 2.625 9.65625C2.625 11.5336 3.35859 13.3008 4.68516 14.6273C6.01172 15.9562 7.77656 16.6875 9.65625 16.6875C11.2266 16.6875 12.7172 16.1766 13.9383 15.2344L20.025 21.3187C20.0428 21.3366 20.064 21.3508 20.0874 21.3604C20.1107 21.3701 20.1357 21.3751 20.1609 21.3751C20.1862 21.3751 20.2112 21.3701 20.2345 21.3604C20.2578 21.3508 20.279 21.3366 20.2969 21.3187L21.3187 20.2992C21.3366 20.2814 21.3508 20.2602 21.3604 20.2369C21.3701 20.2135 21.3751 20.1885 21.3751 20.1633C21.3751 20.138 21.3701 20.113 21.3604 20.0897C21.3508 20.0664 21.3366 20.0452 21.3187 20.0273V20.0273ZM13.3688 13.3688C12.375 14.3602 11.0578 14.9062 9.65625 14.9062C8.25469 14.9062 6.9375 14.3602 5.94375 13.3688C4.95234 12.375 4.40625 11.0578 4.40625 9.65625C4.40625 8.25469 4.95234 6.93516 5.94375 5.94375C6.9375 4.95234 8.25469 4.40625 9.65625 4.40625C11.0578 4.40625 12.3773 4.95 13.3688 5.94375C14.3602 6.9375 14.9062 8.25469 14.9062 9.65625C14.9062 11.0578 14.3602 12.3773 13.3688 13.3688Z" fill="white"/>
+                                    </motion.svg>
+                                </SearchBtn>
+                            </Link>
                         </Item>
-                    : null} */}
-                    <Item><Link to="about">소개</Link></Item>
-                    <Item><Link to="share">공유</Link></Item>
-                    <Item><a href="https://drive.google.com/drive/folders/1BGGXdGj1TmxgzB9buOcw4V0sUdixKIZo?usp=sharing" target="_blank" rel="noreferrer">통합 다운로드</a></Item>
-                    {menuOpen ? null :
-                        <Item>
+                    </MobileHidden>
+                </Items>
+            </Box>
+            
+            {menuOpen ?
+                    <MobileBtn>
+                        <CloseIcon
+                            onClick={toggleMenu}
+                            width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z" fill="white"/>
+                            fuck
+                        </CloseIcon>
+                    </MobileBtn>
+                    :
+                    <MobileBtn>
+                        <Link to="/">
                             <SearchBtn
                                 onClick={toggleSearch}
                             >
@@ -272,24 +283,16 @@ function Header() {
                                     <path d="M21.3187 20.0273L15.232 13.9406C16.1766 12.7195 16.6875 11.2266 16.6875 9.65625C16.6875 7.77656 15.9539 6.01406 14.6273 4.68516C13.3008 3.35625 11.5336 2.625 9.65625 2.625C7.77891 2.625 6.01172 3.35859 4.68516 4.68516C3.35625 6.01172 2.625 7.77656 2.625 9.65625C2.625 11.5336 3.35859 13.3008 4.68516 14.6273C6.01172 15.9562 7.77656 16.6875 9.65625 16.6875C11.2266 16.6875 12.7172 16.1766 13.9383 15.2344L20.025 21.3187C20.0428 21.3366 20.064 21.3508 20.0874 21.3604C20.1107 21.3701 20.1357 21.3751 20.1609 21.3751C20.1862 21.3751 20.2112 21.3701 20.2345 21.3604C20.2578 21.3508 20.279 21.3366 20.2969 21.3187L21.3187 20.2992C21.3366 20.2814 21.3508 20.2602 21.3604 20.2369C21.3701 20.2135 21.3751 20.1885 21.3751 20.1633C21.3751 20.138 21.3701 20.113 21.3604 20.0897C21.3508 20.0664 21.3366 20.0452 21.3187 20.0273V20.0273ZM13.3688 13.3688C12.375 14.3602 11.0578 14.9062 9.65625 14.9062C8.25469 14.9062 6.9375 14.3602 5.94375 13.3688C4.95234 12.375 4.40625 11.0578 4.40625 9.65625C4.40625 8.25469 4.95234 6.93516 5.94375 5.94375C6.9375 4.95234 8.25469 4.40625 9.65625 4.40625C11.0578 4.40625 12.3773 4.95 13.3688 5.94375C14.3602 6.9375 14.9062 8.25469 14.9062 9.65625C14.9062 11.0578 14.3602 12.3773 13.3688 13.3688Z" fill="white"/>
                                 </motion.svg>
                             </SearchBtn>
-                        </Item>
-                    }
-                </Items>
-            </Box>
-            
-            {menuOpen ?
-                    <CloseIcon
-                        onClick={toggleMenu}
-                        width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z" fill="white"/>
-                    </CloseIcon> :
-                    <MenuBtn
-                        onClick={toggleMenu}    
-                    >
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 6H20V8H4V6ZM8 11H20V13H8V11ZM13 16H20V18H13V16Z" fill="white"/>
-                        </svg>
-                    </MenuBtn>        
+                        </Link>
+                        <MenuBtn
+                            onClick={toggleMenu}
+                        >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 6H20V8H4V6ZM8 11H20V13H8V11ZM13 16H20V18H13V16Z" fill="white"/>
+                            </svg>
+                        </MenuBtn>
+                    </MobileBtn>
+                             
             }
 
         </NavBar>
@@ -306,7 +309,7 @@ function Header() {
                         <path d="M21.3187 20.0273L15.232 13.9406C16.1766 12.7195 16.6875 11.2266 16.6875 9.65625C16.6875 7.77656 15.9539 6.01406 14.6273 4.68516C13.3008 3.35625 11.5336 2.625 9.65625 2.625C7.77891 2.625 6.01172 3.35859 4.68516 4.68516C3.35625 6.01172 2.625 7.77656 2.625 9.65625C2.625 11.5336 3.35859 13.3008 4.68516 14.6273C6.01172 15.9562 7.77656 16.6875 9.65625 16.6875C11.2266 16.6875 12.7172 16.1766 13.9383 15.2344L20.025 21.3187C20.0428 21.3366 20.064 21.3508 20.0874 21.3604C20.1107 21.3701 20.1357 21.3751 20.1609 21.3751C20.1862 21.3751 20.2112 21.3701 20.2345 21.3604C20.2578 21.3508 20.279 21.3366 20.2969 21.3187L21.3187 20.2992C21.3366 20.2814 21.3508 20.2602 21.3604 20.2369C21.3701 20.2135 21.3751 20.1885 21.3751 20.1633C21.3751 20.138 21.3701 20.113 21.3604 20.0897C21.3508 20.0664 21.3366 20.0452 21.3187 20.0273V20.0273ZM13.3688 13.3688C12.375 14.3602 11.0578 14.9062 9.65625 14.9062C8.25469 14.9062 6.9375 14.3602 5.94375 13.3688C4.95234 12.375 4.40625 11.0578 4.40625 9.65625C4.40625 8.25469 4.95234 6.93516 5.94375 5.94375C6.9375 4.95234 8.25469 4.40625 9.65625 4.40625C11.0578 4.40625 12.3773 4.95 13.3688 5.94375C14.3602 6.9375 14.9062 8.25469 14.9062 9.65625C14.9062 11.0578 14.3602 12.3773 13.3688 13.3688Z" fill="white"/>
                     </SearchIcon>
                     <SearchInput
-                        placeholder="검색해서 원하는 이모지를 찾아보세요."
+                        placeholder="키워드로 이모지를 찾아보세요."
                     />
                     <CloseIcon
                         onClick={toggleSearch}

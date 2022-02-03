@@ -1,5 +1,8 @@
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Category from "../Components/Category";
+//import Category from "../Components/Category";
 
 import {emojisData} from "../Data/emojisData";
 
@@ -7,7 +10,7 @@ import BGimg from "../img/BG.png"
 
 const Container = styled.div`
   margin-top:-152px;
-  height: 5000vh;
+  overflow: hidden;
 `;
 
 const MainBanner = styled.div`
@@ -74,6 +77,10 @@ const Title = styled.p`
   text-align: center;
   margin-bottom: 24px;
 
+  span {
+    display: block;
+  }
+
   @media only screen and (max-width: 1080px){
     font-size: 64px;
   }
@@ -93,18 +100,17 @@ const SubTitle = styled.p`
   }
 `;
 
+
 const MainSection = styled.div`
   display: flex;
   justify-content: center;
-`;
+  align-items: flex-start;
+`
 
 const Frame = styled.div`
-  width: 100%;
-  overflow: hidden;
   max-width: 1256px;
   margin: 0 auto;
-  padding: 24px;
-
+  padding: 32px;
   display: grid;
   grid-gap: 8px;
   grid-template-columns: repeat(2, 1fr);
@@ -121,77 +127,210 @@ const Frame = styled.div`
   }
 `;
 
-const Box = styled.div`
+const Box = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #161616;
-  border-radius: 8px;
-  min-height: 120px;
+  border-radius: 16px;
+  min-height: 150px;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    box-shadow: 0 8px 24px 24px rgba(0,0,0,0.2);
+  }
 
   img {
     width: 100%;
     @media only screen and (min-width: 800px){
-      max-width: 240px;
-      max-height: 240px;
+      width: 240px;
+      height: 240px;
     }
     
   }
-
-  span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 32px;
-    font-size: 12px;
-    font-weight: bold;
-    @media only screen and (min-width: 800px){
-      font-size: 16px;
-    }
-  }
 `;
 
+const Click = styled(motion.span)`
+  display: flex;
+  opacity: 0;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.2);
+  backdrop-filter: blur(24px);
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  @media only screen and (min-width: 800px){
+    font-size: 16px;
+  }
 
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+`
+
+const ToolTip = styled(motion.span)`
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  padding: 16px 24px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  box-shadow: 0 8px 24px 24px rgba(0,0,0,0.2);
+  text-align: center;
+`
+
+//애니메이션
+
+const boxAnime = {
+  init: {
+    scale: 1,
+    transition: {
+      type: "tween"
+    }
+  },
+  hover: {
+    scale: 1.2,
+    y: -8,
+    transition: {
+      delay: 0.1,
+      duration: 0.3,
+      type: "tween"
+    }
+  }
+}
+
+const clickAnime = {
+  init: {
+    opacity: 0,
+    scale: 0,
+    x: "-50%",
+    y: 8,
+  },
+  hover: {
+    opacity: 1,
+    scale: 1,
+    x: "-50%",
+    y: 0,
+    transition: {
+      delay: 0.2,
+      duration: 0.2,
+      type: "tween"
+    }
+  }
+}
+
+const toolTipAnime = {
+  init: {
+    opacity: 0,
+    scale: 0,
+    x: "-50%",
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    x: "-50%",
+    transition: {
+      delay: 1,
+      duration: 0.2,
+      type: "tween"
+    }
+  },
+  hidden: {
+    opacity: 0,
+    scale: 0,
+    x: "-50%",
+  }
+}
+
+const scrollToTop = () => {
+  window.scrollTo(0, 0)
+  console.log("스크롤")
+}
 
 
 function Home() {
-  console.log(emojisData)
-
+  const [isCopy, setIsCopy] = useState(false);
+  const checkCopy = () => {
+    setIsCopy(true)
+    const timeout = setTimeout(()=>setIsCopy(false),3000)
+    return () => {
+      clearTimeout(timeout)
+    }
+  }
+  
   return <>
-    <Category />
+    {/* <Category /> */}
     <Container>
       <MainBanner />
 
       <Copy>
           <Title>
-            <p>88개가 넘는 이모지.</p>
-            <p>이 모든 것이 모두 무료.</p>
+            <span>88개가 넘는 이모지.</span>
+            <span>이 모든 것이 모두 무료.</span>
           </Title>
           <SubTitle>
-            - 현재 구직 중인 이윤규 드림 -
+            Designed by 이윤규
           </SubTitle>
       </Copy>
-
+      
       <MainSection>
         <Frame>
           {emojisData.map(emoji =>
-            <Box key={emoji.id}>
-              <a href={emoji.download_link}>
-                <img src={emoji.thumnail_img_src} alt="emoji tumnail" />
-                <span>{emoji.id}</span>
-                <span>{emoji.sub_category.KOR_title}</span>
-                <span>{emoji.KOR_title}</span>
-              </a>
+            <Box
+              key={emoji.id}
+              variants={boxAnime}
+              whileHover="hover"
+              initial="init"
+              onClick={checkCopy}
+            >
+              <a href={emoji.download_link} data-scroll={emoji.sub_category.KOR_title}>
+                <motion.img layout src={emoji.thumnail_img_src} alt="emoji tumnail" />
+                <Click variants={clickAnime}>다운로드</Click>
+              </a>              
             </Box>
           )}
-          {/* {[...Array(499)].map((i) => (
-                  <Box key={i}>{i}</Box>
-          ))} */}
-          
+          <Box 
+            variants={boxAnime}
+            whileHover="hover"
+            initial="init"
+          >
+            <Link to="about" onClick={scrollToTop}>
+              반응 좋으면
+              <Click variants={clickAnime}>소개 페이지로</Click>
+            </Link>
+          </Box>
+          <Box 
+            variants={boxAnime}
+            whileHover="hover"
+            initial="init"
+          >
+            <Link to="about" onClick={scrollToTop}>
+              더 만들겠습니다.
+              <Click variants={clickAnime}>소개 페이지로</Click> 
+            </Link>
+          </Box>
+          <Box 
+            variants={boxAnime}
+            whileHover="hover"
+            initial="init"
+          >
+            <Link to="about" onClick={scrollToTop}>
+              100개 더!
+              <Click variants={clickAnime}>소개 페이지로</Click>
+            </Link>
+          </Box>
         </Frame>
       </MainSection>
-    </Container> 
+    </Container>
+    <AnimatePresence>
+      {isCopy ? <ToolTip variants={toolTipAnime} initial="init" animate="visible" exit="hidden">다운 완료</ToolTip> : null }
+    </AnimatePresence>
   </>;
 }
 

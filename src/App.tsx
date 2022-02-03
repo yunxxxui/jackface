@@ -1,5 +1,6 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Header from "./Components/Header";
+import ToTop from "./Components/ToTop";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Search from "./Pages/Search";
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/" element={<Home/>}/>
       </Routes>
+      <ToTop/>
     </Router>
   );
 }

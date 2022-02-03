@@ -787,7 +787,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[10],
       KOR_title: "화내며 씩씩거리는 얼굴",
       ENG_title: "Huffing With Anger Face",
-      thumnail_img_src: `${viewImgSrc}1ITF0Sk0bNULxOIb7yCKQfJxnIWwDpx3M`,
+      thumnail_img_src: `${viewImgSrc}1PBQQGfzHX3oEpfLp5Qgn4ItECAchEU99`,
       orginal_img_Src: `${viewImgSrc}1BUOjle368oclbHb-VH7zZgUZJS9wl3GA`,
       download_link: `${downloadImgSrc}1BUOjle368oclbHb-VH7zZgUZJS9wl3GA`,
       tag: ["부정","negative"]
@@ -798,7 +798,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[10],
       KOR_title: "화난 얼굴",
       ENG_title: "Angry face",
-      thumnail_img_src: `${viewImgSrc}18vlmmuwszUI4fcfnkehG4P1fJ2tkjAos`,
+      thumnail_img_src: `${viewImgSrc}1nLyzKrqi4_Y8gpv5ScVKZ2oqs0gDzJnS`,
       orginal_img_Src: `${viewImgSrc}18RanH2lRRDkzX3ze-jplppAptCbsn2ev`,
       download_link: `${downloadImgSrc}18RanH2lRRDkzX3ze-jplppAptCbsn2ev`,
       tag: ["부정","negative"]
@@ -809,7 +809,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[10],
       KOR_title: "욕하는 얼굴",
       ENG_title: "Face With Symbols Over Mouth",
-      thumnail_img_src: `${viewImgSrc}1hTyYhCZnkyz1QPubYRZsiqd654ncEykB`,
+      thumnail_img_src: `${viewImgSrc}1CiAg_zwkjX5TAlYqYx_0BMwDC0zckjYV`,
       orginal_img_Src: `${viewImgSrc}1Y89n4iITvZUbJYxzHG8wAUFCr_Psq_Ce`,
       download_link: `${downloadImgSrc}1Y89n4iITvZUbJYxzHG8wAUFCr_Psq_Ce`,
       tag: ["부정","negative"]
@@ -820,7 +820,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[10],
       KOR_title: "머리에 뿔이 달린 웃는 얼굴",
       ENG_title: "Smiling Face With Horns",
-      thumnail_img_src: `${viewImgSrc}1Aqqh84EtaaPo7gHoRcey18eo_Cj9L0kf`,
+      thumnail_img_src: `${viewImgSrc}1SPVEuLUA9PQkIPOtZzoD5i0p19Bll5O2`,
       orginal_img_Src: `${viewImgSrc}19jkgXwmEbVdyWfPIVQriMsOmltZIPH7a`,
       download_link: `${downloadImgSrc}19jkgXwmEbVdyWfPIVQriMsOmltZIPH7a`,
       tag: ["부정","negative"]
@@ -831,7 +831,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[10],
       KOR_title: "머리에 뿔이 달린 화난 얼굴",
       ENG_title: "Angry Face With Horns",
-      thumnail_img_src: `${viewImgSrc}13-oum7qQswvWfLyvgzYCDJayE-nXQGUS`,
+      thumnail_img_src: `${viewImgSrc}1frNVdzdU96ZdndgfSb_vowjkdAKhgE4N`,
       orginal_img_Src: `${viewImgSrc}11HaXU_ryl8sWob1X1KDICCXAcuBAEHUF`,
       download_link: `${downloadImgSrc}11HaXU_ryl8sWob1X1KDICCXAcuBAEHUF`,
       tag: ["부정","negative"]
@@ -842,7 +842,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[10],
       KOR_title: "해골 얼굴",
       ENG_title: "Skull",
-      thumnail_img_src: `${viewImgSrc}1orUu3gbL55rY2sSZa8rJtRLsX9ZCacyH`,
+      thumnail_img_src: `${viewImgSrc}1DcbufJsIfMzOKB4kItx-MKIrSkCLu-R8`,
       orginal_img_Src: `${viewImgSrc}1BNqR2hznKyF3fTpOZxt839hw0Dlb82vH`,
       download_link: `${downloadImgSrc}1BNqR2hznKyF3fTpOZxt839hw0Dlb82vH`,
       tag: ["부정","negative"]
@@ -854,7 +854,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[11],
       KOR_title: "똥",
       ENG_title: "Pile of Poop",
-      thumnail_img_src: `${viewImgSrc}1NrOyXF79zxw7hfu4C69_b9jeqh4BZlSl`,
+      thumnail_img_src: `${viewImgSrc}1VxGhNQIZfxdlJyD7nxKYOtenEJwhtQXq`,
       orginal_img_Src: `${viewImgSrc}1kMOiQ58m9NV1997rh2gPmcQ2R6Zos6s3`,
       download_link: `${downloadImgSrc}1kMOiQ58m9NV1997rh2gPmcQ2R6Zos6s3`,
       tag: ["커스텀","costume"]
@@ -865,7 +865,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[11],
       KOR_title: "어릿광대 얼굴",
       ENG_title: "Clown Face",
-      thumnail_img_src: `${viewImgSrc}1bznQVwiwna7xx3Uv_jZJUYd6c4GlEbBQ`,
+      thumnail_img_src: `${viewImgSrc}13-HqQIlaGjrcNOqiaWM--EyRui8foak6`,
       orginal_img_Src: `${viewImgSrc}1KnIlhVshv5myD-yl6MyGuEr09QgnRwoP`,
       download_link: `${downloadImgSrc}1KnIlhVshv5myD-yl6MyGuEr09QgnRwoP`,
       tag: ["커스텀","costume"]
@@ -876,7 +876,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[11],
       KOR_title: "유령",
       ENG_title: "Ghost",
-      thumnail_img_src: `${viewImgSrc}1rH0rEaSOBOe-H-wqBgbvcN6iufVfa6h9`,
+      thumnail_img_src: `${viewImgSrc}1aJuVZLvGICPmTUQxKJEzOIrK6KiAEALc`,
       orginal_img_Src: `${viewImgSrc}1qGwqi5GWaHeNNDR9NmOZttycFR9QSCJ8`,
       download_link: `${downloadImgSrc}1qGwqi5GWaHeNNDR9NmOZttycFR9QSCJ8`,
       tag: ["커스텀","costume"]
@@ -887,7 +887,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[11],
       KOR_title: "좀비",
       ENG_title: "Zombie",
-      thumnail_img_src: `${viewImgSrc}1JV5-SrnJUI8Y64-ZlkuTfylHjy5S11Tu`,
+      thumnail_img_src: `${viewImgSrc}1mj-o-9MidRP2i1Bp8h2RcFbx_eKgQ0h4`,
       orginal_img_Src: `${viewImgSrc}14PWIg3VUu3VCFXxOnziEJsC-wwwm0eCW`,
       download_link: `${downloadImgSrc}14PWIg3VUu3VCFXxOnziEJsC-wwwm0eCW`,
       tag: ["커스텀","costume"]
@@ -903,7 +903,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[14],
       KOR_title: "번쩍이는 하트",
       ENG_title: "Sparkling Heart",
-      thumnail_img_src: `${viewImgSrc}1iEfzrdzBYMuQbMRUMPYASZ1mO0AC3SkY`,
+      thumnail_img_src: `${viewImgSrc}1uQFRIObPLKw5GCv8Wsx6oet9qlkd-b1V`,
       orginal_img_Src: `${viewImgSrc}17mJfCVDWyTKehtH6FdqWKzWXxTU1uub3`,
       download_link: `${downloadImgSrc}17mJfCVDWyTKehtH6FdqWKzWXxTU1uub3`,
       tag: ["감정","emotion"]
@@ -914,7 +914,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[14],
       KOR_title: "빨간색 하트",
       ENG_title: "Red heart",
-      thumnail_img_src: `${viewImgSrc}1GtXRszFZOZws8BeUI0Y2lo2l1jkyBz8u`,
+      thumnail_img_src: `${viewImgSrc}1IuTz7nuYpOLKiVHt0t2YBh8tn-7222B9`,
       orginal_img_Src: `${viewImgSrc}1ffA3Jr33EqQwAkTTd0cYJ-mw2fBes0Ct`,
       download_link: `${downloadImgSrc}1ffA3Jr33EqQwAkTTd0cYJ-mw2fBes0Ct`,
       tag: ["감정","emotion"]
@@ -925,7 +925,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[14],
       KOR_title: "주황색 하트",
       ENG_title: "Orange heart",
-      thumnail_img_src: `${viewImgSrc}1tJMr9v5NkhU-ZN1UUiWLrkOXRHY450_f`,
+      thumnail_img_src: `${viewImgSrc}1LtOeqfXKWFxrkDeAN4rcH0_q2tlrLSsE`,
       orginal_img_Src: `${viewImgSrc}1ThHkKOw0FM2vilZtPNyJVPRhZFKJZ2FV`,
       download_link: `${downloadImgSrc}1ThHkKOw0FM2vilZtPNyJVPRhZFKJZ2FV`,
       tag: ["감정","emotion"]
@@ -936,7 +936,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[14],
       KOR_title: "노란색 하트",
       ENG_title: "Yellow heart",
-      thumnail_img_src: `${viewImgSrc}1TwWgfIHoLJsy28oiHS_h7ovSndw4bAWT`,
+      thumnail_img_src: `${viewImgSrc}19btkeVf4wHqx6nN1z_ayddYtmAqz-5E5`,
       orginal_img_Src: `${viewImgSrc}1VPwlHcSA67MjelTNP2jcYqFvceEvyW2c`,
       download_link: `${downloadImgSrc}1VPwlHcSA67MjelTNP2jcYqFvceEvyW2c`,
       tag: ["감정","emotion"]
@@ -947,7 +947,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[14],
       KOR_title: "초록색 하트",
       ENG_title: "Green heart",
-      thumnail_img_src: `${viewImgSrc}1Jm-w0cefKxDMcyfj_zar0RF5dmoPIFXg`,
+      thumnail_img_src: `${viewImgSrc}197WtQ_JzW2NeaZLiXn95Zisq9RLbZk97`,
       orginal_img_Src: `${viewImgSrc}1u9qwIn3K0qzpYvKgsgOpYFGhI8Ndxt4H`,
       download_link: `${downloadImgSrc}1u9qwIn3K0qzpYvKgsgOpYFGhI8Ndxt4H`,
       tag: ["감정","emotion"]
@@ -958,7 +958,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[14],
       KOR_title: "파란색 하트",
       ENG_title: "Blue heart",
-      thumnail_img_src: `${viewImgSrc}1VFT5HukvBy-mnt3hole2ng1RJI9Minpa`,
+      thumnail_img_src: `${viewImgSrc}1WlpyZpyleSBbWh5M3aO1XTJihYhK8b06`,
       orginal_img_Src: `${viewImgSrc}1y6uf2nF02TPR7-HwLmOa-9EsvJSPcBx-`,
       download_link: `${downloadImgSrc}1y6uf2nF02TPR7-HwLmOa-9EsvJSPcBx-`,
       tag: ["감정","emotion"]
@@ -969,7 +969,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[14],
       KOR_title: "보라색 하트",
       ENG_title: "Purple heart",
-      thumnail_img_src: `${viewImgSrc}1Bz6wAqT9GerEoDwH2p_5CF-vG0IbES_N`,
+      thumnail_img_src: `${viewImgSrc}1uDh_5HaPva2Qqx8EyhQDkmqIjP3DhzKX`,
       orginal_img_Src: `${viewImgSrc}1OQY1mBfqyfAM8MxlK0SCfrcZV3CuWK5d`,
       download_link: `${downloadImgSrc}1OQY1mBfqyfAM8MxlK0SCfrcZV3CuWK5d`,
       tag: ["감정","emotion"]
@@ -980,7 +980,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[14],
       KOR_title: "갈색 하트",
       ENG_title: "Brown heart",
-      thumnail_img_src: `${viewImgSrc}1jTvFjSQXjhh4fmDqhZfyiu8mjE0YSy8h`,
+      thumnail_img_src: `${viewImgSrc}1ABZmf9NS5VS5YqhsloJSyJe_Vh2dcYYW`,
       orginal_img_Src: `${viewImgSrc}1EMRBYHCF_ZIZXl6pSfhqOZjmPMakc5PW`,
       download_link: `${downloadImgSrc}1EMRBYHCF_ZIZXl6pSfhqOZjmPMakc5PW`,
       tag: ["감정","emotion"]
@@ -991,7 +991,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[14],
       KOR_title: "검은색 하트",
       ENG_title: "Black heart",
-      thumnail_img_src: `${viewImgSrc}1tm8VAYnunn6WJbEaXWs6adLUPLy9ODDc`,
+      thumnail_img_src: `${viewImgSrc}1b2ZWB6m4HiMgezJ6zHsM66GiLtkIaNI9`,
       orginal_img_Src: `${viewImgSrc}14AAaGzO_Tok9iwh4pR5s3xhyxzPA7H4c`,
       download_link: `${downloadImgSrc}14AAaGzO_Tok9iwh4pR5s3xhyxzPA7H4c`,
       tag: ["감정","emotion"]
@@ -1002,7 +1002,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[14],
       KOR_title: "흰색 하트",
       ENG_title: "White heart",
-      thumnail_img_src: `${viewImgSrc}1kqWbD-dmvqV2MqoKXNDQLILXjNN6cAXZ`,
+      thumnail_img_src: `${viewImgSrc}1FTcNpHUxjahLA1VvxVfYAY0wSuLRwa5w`,
       orginal_img_Src: `${viewImgSrc}1YvbPW2PusCWNNRNUBGQaDHFuercAOcqj`,
       download_link: `${downloadImgSrc}1YvbPW2PusCWNNRNUBGQaDHFuercAOcqj`,
       tag: ["감정","emotion"]
@@ -1013,7 +1013,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[14],
       KOR_title: "불",
       ENG_title: "Fire",
-      thumnail_img_src: `${viewImgSrc}18g1K5lkpxusGdl8B4DV4ymhaqVhzRVnj`,
+      thumnail_img_src: `${viewImgSrc}1zaMBK5b6goyWmoDsG2RyZzDEa8NnUcTA`,
       orginal_img_Src: `${viewImgSrc}1QXc5o04Ls4Vxci9oke02KPx7Gz7XB8ia`,
       download_link: `${downloadImgSrc}1QXc5o04Ls4Vxci9oke02KPx7Gz7XB8ia`,
       tag: ["감정","emotion"]
@@ -1024,7 +1024,7 @@ export const emojisData:IEmojisData[]= [
       sub_category: main01_subCategory[14],
       KOR_title: "번개",
       ENG_title: "Lightning",
-      thumnail_img_src: `${viewImgSrc}1unmNEpCcHHubcePQCOo82FJ28dOgedP5`,
+      thumnail_img_src: `${viewImgSrc}1Yrx-9QyiM_JnfWnX5q0gcRjgft6rPbQv`,
       orginal_img_Src: `${viewImgSrc}1DYY2foSbfNdOxd-jZKzjL7ygMJSlF4xc`,
       download_link: `${downloadImgSrc}1DYY2foSbfNdOxd-jZKzjL7ygMJSlF4xc`,
       tag: ["감정","emotion"]
