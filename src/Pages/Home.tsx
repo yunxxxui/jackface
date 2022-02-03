@@ -341,7 +341,7 @@ function Home() {
             whileHover="hover"
             initial="init"
           >
-            <Link to="about" onClick={scrollToTop}>
+            <Link to="jackface/about" onClick={scrollToTop}>
               반응 좋으면
               <Click variants={clickAnime}>더 알아보기</Click>
             </Link>
@@ -351,7 +351,7 @@ function Home() {
             whileHover="hover"
             initial="init"
           >
-            <Link to="about" onClick={scrollToTop}>
+            <Link to="jackface/about" onClick={scrollToTop}>
               더 만들겠습니다.
               <Click variants={clickAnime}>더 알아보기</Click> 
             </Link>
@@ -361,7 +361,7 @@ function Home() {
             whileHover="hover"
             initial="init"
           >
-            <Link to="about" onClick={scrollToTop}>
+            <Link to="jackface/about" onClick={scrollToTop}>
               100개 더!
               <Click variants={clickAnime}>더 알아보기</Click>
             </Link>

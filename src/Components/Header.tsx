@@ -225,7 +225,7 @@ function Header() {
     const onValid = (data:IForm) => {
         console.log(data)
         setValue("keword", "")
-        navigate(`/search?keyword=${data.keword}`);
+        navigate(`jackface/search?keyword=${data.keword}`);
     }
 
   return <Container>
@@ -234,7 +234,7 @@ function Header() {
             initial="initial"
             animate={searchOpen? "hidden" : "visible"}
         >
-            <Link to="/">
+            <Link to="/jackface">
                 <Box>
                     <Logo
                         width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -253,7 +253,7 @@ function Header() {
                     menuOpen={menuOpen}
                 >
                     <Item>
-                        <Link to="about" onClick={toggleMenu}>소개</Link>
+                        <Link to="jackface/about" onClick={toggleMenu}>소개</Link>
                     </Item>
                     <Item><a href="https://drive.google.com/drive/folders/1BGGXdGj1TmxgzB9buOcw4V0sUdixKIZo?usp=sharing" target="_blank" rel="noreferrer" onClick={toggleMenu}>통합 다운로드</a></Item>
                     <MobileHidden>
