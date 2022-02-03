@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/jackface/static/js/main.83209e30.js",
+    "main.js": "/jackface/static/js/main.9d5601af.js",
     "static/media/BG.png": "/jackface/static/media/BG.ac76fe34eda46a7a9d31.png",
     "static/media/img_10.png": "/jackface/static/media/img_10.7660a73144171d7b4aa3.png",
     "static/media/img_08.png": "/jackface/static/media/img_08.3e193eb6a2c38736c705.png",
@@ -16,9 +16,9 @@
     "static/media/img_03.png": "/jackface/static/media/img_03.f88b273dc22ca7e5fb87.png",
     "static/media/img_01.png": "/jackface/static/media/img_01.0149db1022202b0d71f5.png",
     "index.html": "/jackface/index.html",
-    "main.83209e30.js.map": "/jackface/static/js/main.83209e30.js.map"
+    "main.9d5601af.js.map": "/jackface/static/js/main.9d5601af.js.map"
   },
   "entrypoints": [
-    "static/js/main.83209e30.js"
+    "static/js/main.9d5601af.js"
   ]
 }
