@@ -32,7 +32,7 @@ function Search() {
       <>
       {emojisData.filter((data)=>data.tag?.includes(keyword+"")).map(emoji =>
               
-              <div onClick={checkCopy}>
+              <div onClick={checkCopy} key={emoji.id}>
                 <BoxEmoji 
                 id={emoji.id}
                 main_category={emoji.main_category}
