@@ -4,7 +4,6 @@ import NavGlobal from "./Components/NavGlobal";
 import ToTop from "./Components/ToTop";
 import About from "./Pages/About";
 import Search from "./Pages/Search";
-import Share from "./Pages/Share";
 
 const Home = lazy(()=>
   import("./Pages/Home")
@@ -18,7 +17,6 @@ function App() {
         <Routes>
           
           <Route path="/search"element={<Search/>}/>
-          <Route path="/share"element={<Share/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/" element={<Home/>}/>
           <Route
