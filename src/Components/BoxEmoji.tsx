@@ -175,7 +175,7 @@ function BoxEmoji({
         //onClick={checkCopy}
     >
         <a href={download_link} data-scroll={sub_category.KOR_title}>
-        <Tag variants={tagAnime}>{tag?.map(data => <span>{data}</span>)}</Tag>
+        <Tag variants={tagAnime}>{tag?.map(data => <span>#{data}</span>)}</Tag>
         <motion.img src={thumnail_img_src} width="240px" height="240px" alt={ENG_title} loading="lazy"/>
         <Click variants={clickAnime}>다운로드</Click>
         </a>              

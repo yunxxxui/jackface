@@ -50,13 +50,13 @@ const GlobalStyles = createGlobalStyle`
     }
     * {
     box-sizing: border-box;
-    }
     body {
-    font-weight: 300;
-    font-family: 'SF pro', sans-serif;
-    color: rgba(255,255,255,1);
-    line-height: 1.2;
     background-color: rgba(0,0,0,1);
+    line-height: 1.2;
+    font-weight: 300;
+    color: rgba(255,255,255,1);
+    font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue',  'Apple SD Gothic Neo', 'Roboto', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    }
     }
     a {
     text-decoration:none;
