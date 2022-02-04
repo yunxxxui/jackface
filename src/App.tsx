@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom"
+import {HashRouter as Router, Routes, Route, Navigate} from "react-router-dom"
 import NavGlobal from "./Components/NavGlobal";
 import ToTop from "./Components/ToTop";
 import About from "./Pages/About";
