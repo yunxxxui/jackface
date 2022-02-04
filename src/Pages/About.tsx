@@ -1,20 +1,20 @@
 import styled from "styled-components";
-import QR from "../img/QR.jpg";
+import QR from "img/QR.jpg";
 
-import img_01 from "../img/about/img_01.png"
-import img_02 from "../img/about/img_02.png"
-import img_03 from "../img/about/img_03.png"
-import img_04 from "../img/about/img_04.png"
+import img_01 from "img/about/img_01.png"
+import img_02 from "img/about/img_02.png"
+import img_03 from "img/about/img_03.png"
+import img_04 from "img/about/img_04.png"
 
-import img_05 from "../img/about/img_05.png"
-import img_06 from "../img/about/img_06.png"
-import img_07 from "../img/about/img_07.png"
-import img_08 from "../img/about/img_08.png"
+import img_05 from "img/about/img_05.png"
+import img_06 from "img/about/img_06.png"
+import img_07 from "img/about/img_07.png"
+import img_08 from "img/about/img_08.png"
 
-import img_09 from "../img/about/img_09.png"
-import img_10 from "../img/about/img_10.png"
-import img_11 from "../img/about/img_11.png"
-import img_12 from "../img/about/img_12.png"
+import img_09 from "img/about/img_09.png"
+import img_10 from "img/about/img_10.png"
+import img_11 from "img/about/img_11.png"
+import img_12 from "img/about/img_12.png"
 
 const Container = styled.div`
   overflow: hidden;

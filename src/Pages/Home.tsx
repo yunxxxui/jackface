@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 
 //컴포넌트
 import styled from "styled-components";
-import BoxEmoji from "../Components/BoxEmoji";
-import BoxGrid from "../Components/BoxGrid";
-import Loader from "../Components/Loader";
-import ToolTip from "../Components/ToolTip";
-//import NavLocal from "../Components/NavLocal";
+import BoxEmoji from "Components/BoxEmoji";
+import BoxGrid from "Components/BoxGrid";
+import Loader from "Components/Loader";
+import ToolTip from "Components/ToolTip";
+//import NavLocal from "Components/NavLocal";
 
 //데이터
-import {emojisData} from "../Data/emojisData";
+import {emojisData} from "Data/emojisData";
 
 //이미지
-import BGimg from "../img/BG.webp"
+import BGimg from "img/BG.webp"
 
 //CSS
 const Container = styled.div`

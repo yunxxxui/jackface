@@ -3,12 +3,12 @@ import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 //컴포넌트
-import BoxEmoji from "../Components/BoxEmoji";
-import BoxGrid from "../Components/BoxGrid";
-import ToolTip from "../Components/ToolTip";
+import BoxEmoji from "Components/BoxEmoji";
+import BoxGrid from "Components/BoxGrid";
+import ToolTip from "Components/ToolTip";
 
 //데이터
-import {emojisData} from "../Data/emojisData";
+import {emojisData} from "Data/emojisData";
 
 const Container = styled.div`
   margin-top: 160px;

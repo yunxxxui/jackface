@@ -1,9 +1,9 @@
 import { lazy, Suspense } from "react";
 import {HashRouter as Router, Routes, Route, Navigate} from "react-router-dom"
-import NavGlobal from "./Components/NavGlobal";
-import ToTop from "./Components/ToTop";
-import About from "./Pages/About";
-import Search from "./Pages/Search";
+import NavGlobal from "Components/NavGlobal";
+import ToTop from "Components/ToTop";
+import About from "Pages/About";
+import Search from "Pages/Search";
 
 const Home = lazy(()=>
   import("./Pages/Home")
