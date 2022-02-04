@@ -115,7 +115,7 @@ function About() {
             #피그마 #C4D #리액트
           </SubTitle>
           <SubTitle>
-            <Bold>구합니다, 구직 중인 디자이너 이윤규</Bold>
+            <Bold>프로덕트 디자이너 이윤규, 구합니다</Bold>
           </SubTitle>
           <Title>
             <span>함께할 팀원,</span>
@@ -129,7 +129,7 @@ function About() {
           </a>
           <SubTitle>
               <span>카톡 채팅방 링크</span>
-              <span>항시 대기중</span>
+              <span>연락 대기중</span>
           </SubTitle>
         </Box>
         </Box>

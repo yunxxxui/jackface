@@ -58,7 +58,7 @@ const Name = styled.span`
 `;
 
 
-function Category() {
+function NavLocal() {
   return <>
     <Container>
         <Frame>
@@ -103,4 +103,4 @@ function Category() {
     </>
 }
 
-export default Category;
+export default NavLocal;

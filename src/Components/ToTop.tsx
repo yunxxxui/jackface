@@ -29,7 +29,7 @@ function ToTop() {
   }
   return <Container>
       <Btn onClick={scrollToTop}>
-        Top
+        ▲
       </Btn>
   </Container>;
 }

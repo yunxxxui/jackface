@@ -211,21 +211,26 @@ interface IForm {
     keword: string;
 }
 
-function Header() {
+function NavGlobal() {
+    const scrollToTop = () => {
+        window.scrollTo({top:0} )
+    }
+
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
-        setMenuOpen((prev)=>!prev)
+        setMenuOpen((prev)=>!prev);
+        scrollToTop();
     }
     const [searchOpen, setSearchOpen] = useState(false);
     const toggleSearch = () => {
-        setSearchOpen((prev)=>!prev)
+        setSearchOpen((prev)=>!prev);
     }
     const {register, handleSubmit, setValue } = useForm<IForm>();
     let navigate = useNavigate();
     const onValid = (data:IForm) => {
-        console.log(data)
-        setValue("keword", "")
+        setValue("keword", "");
         navigate(`search?keyword=${data.keword}`);
+        scrollToTop();
     }
 
   return <Container>
@@ -234,7 +239,7 @@ function Header() {
             initial="initial"
             animate={searchOpen? "hidden" : "visible"}
         >
-            <Link to="/">
+            <Link to="/" onClick={scrollToTop }>
                 <Box>
                     <Logo
                         width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -330,4 +335,4 @@ function Header() {
     </Container>;
 }
 
-export default Header;
+export default NavGlobal;
