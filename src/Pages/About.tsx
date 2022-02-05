@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import QR from "img/QR.jpg";
 
 import img_01 from "img/about/img_01.png"
@@ -16,10 +16,29 @@ import img_10 from "img/about/img_10.png"
 import img_11 from "img/about/img_11.png"
 import img_12 from "img/about/img_12.png"
 
+const show = keyframes`
+    0% {
+      background-color: rgba(0,0,0,1);
+      color: rgba(255,255,255,1);
+    }
+    50% {
+      background-color: rgba(0,0,0,1);
+      color: rgba(255,255,255,1);
+    }
+    100% {
+      background-color: rgba(255,255,255,1);
+      color: rgba(0,0,0,1);
+    }
+`
+
 const Container = styled.div`
   overflow: hidden;
-  background-color: white;
-  color: black;
+
+  animation-name: ${show};
+  animation-delay: 0.2s;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 `
 
 const Copy = styled.div`
