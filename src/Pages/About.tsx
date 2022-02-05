@@ -128,8 +128,8 @@ function About() {
             <QRcode src={QR} alt="my profile contact" />
           </a>
           <SubTitle>
-              <span>카톡 채팅방 링크</span>
-              <span>연락 대기중</span>
+              <span>오픈 채팅방 링크</span>
+              <span>소통 대환영</span>
           </SubTitle>
         </Box>
         </Box>
