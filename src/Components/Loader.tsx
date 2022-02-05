@@ -2,13 +2,13 @@ import styled, { keyframes } from "styled-components";
 
 const blink = keyframes`
     0% {
-        opacity: 0.8;
+        opacity: 0.5;
     }
     40% {
         opacity: 1;
     }
     100% {
-        opacity: 0.8;
+        opacity: 0.5;
     }
 `
 
@@ -48,23 +48,10 @@ const Box = styled.div`
 
 function Loader() {
   return <>
-    {[...Array(8)].map((n, index) => {
-        return (
-            <>
-                <Box style={{animationDelay: "0.1s"}}/>
-                <Box style={{animationDelay: "0.2s"}}/>
-                <Box style={{animationDelay: "0.3s"}}/>
-                <Box style={{animationDelay: "0.4s"}}/>
-                <Box style={{animationDelay: "0.5s"}}/>
-                <Box style={{animationDelay: "0.6s"}}/>
-                <Box style={{animationDelay: "0.7s"}}/>
-                <Box style={{animationDelay: "0.8s"}}/>
-                <Box style={{animationDelay: "0.9s"}}/>
-                <Box style={{animationDelay: "1s"}}/>
-            </>
-        )
-    })}
-    
+    <Box style={{animationDelay: "0.1s"}}/>
+    <Box style={{animationDelay: "0.2s"}}/>
+    <Box style={{animationDelay: "0.3s"}}/>
+    <Box style={{animationDelay: "0.4s"}}/>
   </>;
 }
 
