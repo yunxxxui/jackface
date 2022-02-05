@@ -23,9 +23,11 @@ const Container = styled.div`
 
 const MainBanner = styled.div`
   position: absolute;
+  top: 0;
+  right: 0;
   z-index: -1;
   width: 100%;
-  height: 720px;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,21 +41,11 @@ const MainBanner = styled.div`
   &::before {
     content: "";
     width: 100%;
-    height: 724px;
+    height: 81vh;
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 90%);
-
-    @media only screen and (max-width: 700px){
-      background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%);
-      height: 480px;
-    }
-  }
-  
-
-  @media only screen and (max-width: 700px){
-    height: 480px;
+    background: linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,1) 95%);
   }
 `;
 
@@ -62,20 +54,20 @@ const Copy = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-top: 240px;
+  padding-top: 65vh;
   padding-bottom: 40px;
 
   word-break: keep-all;
   word-wrap: break-word;
 
   @media only screen and (max-width: 1080px){
-    padding-top: 200px;
-    padding-bottom: 40px;
+    padding-top: 70vh;
+    padding-bottom: 24px;
   }
 
   @media only screen and (max-width: 700px){
-    padding-top: 120px;
-    padding-bottom: 40px;
+    margin-top: -15vh;
+    font-size: 24px;
   }
 `;
 
@@ -137,12 +129,6 @@ function Home() {
   const [isLoading,setIsLoading] = useState(true);
 
   useEffect(()=> {
-    // const img = new Image();
-
-    // img.src = emojisData[0].thumnail_img_src;
-    // img.onload = () => {
-    //   setIsLoading(true);
-    // }
     let checkLoad = 0;
     emojisData.map((emoji) => {
       const newImg = new Image();
