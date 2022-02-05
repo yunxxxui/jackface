@@ -54,6 +54,11 @@ const Bold = styled.span`
     font-weight: bold;
 `;
 
+const Hi = styled(motion.span)`
+    font-weight: bold;
+`
+const Face = styled(motion.span)``;
+
 const Items = styled.ul<{menuOpen : boolean}>`
     display: flex;
     flex-direction: row;
@@ -168,11 +173,9 @@ const CloseIcon = styled.svg`
 const navBarAnime = {
     initial: {
         opacity: 1,
-        x:0,
     },
     visible: {
         opacity: 1,
-        x:0,
         transition: {
             type:"spring",
             ease:"easeOut",
@@ -181,7 +184,6 @@ const navBarAnime = {
     },
     hidden: {
         opacity: 0,
-        x:0,
     }
 
 }
@@ -205,6 +207,42 @@ const searchBarAnime = {
         x: 100,
     }
 
+}
+
+const hiAnime = {
+    initial: {
+        opacity: 1,
+    },
+
+    visible: {
+        display: "none",
+        transition: {
+            type:"spring",
+            ease:"easeOut",
+            delay: 4,
+        }
+    },
+
+    hidden: {
+        opacity: 0,
+    }
+}
+
+const faceAnime = {
+    initial: {
+        opacity: 0,
+        x: -100,
+    },
+
+    visible: {
+        opacity: [0,1],
+        x: 0,
+        transition: {
+            type:"spring",
+            ease:"easeOut",
+            delay: 4,
+        }
+    },
 }
 
 interface IForm {
@@ -249,7 +287,9 @@ function NavGlobal() {
                         <path d="M11.92 21.1067C11.92 21.1067 12.5067 23.0267 15.4 23.0267C18.2933 23.0267 18.88 21.1067 18.88 21.1067H11.92Z" fill="white"/>
                     </Logo>
                     <Title>
-                        <Bold>Jack</Bold>face
+                        <Hi variants={hiAnime} initial="initial" animate="visible" exit="hidden">Hi, </Hi>
+                        <Bold>Jack</Bold>
+                        <Face variants={faceAnime} initial="initial" animate="visible">face</Face>
                     </Title>
                 </Box>
             </Link>

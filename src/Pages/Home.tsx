@@ -14,6 +14,7 @@ import {emojisData} from "Data/emojisData";
 
 //이미지
 import BGimg from "img/BG.webp"
+import { AnimatePresence, motion } from "framer-motion";
 
 //CSS
 const Container = styled.div`
@@ -49,7 +50,7 @@ const MainBanner = styled.div`
   }
 `;
 
-const Copy = styled.div`
+const Copy = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,16 +67,15 @@ const Copy = styled.div`
   }
 
   @media only screen and (max-width: 700px){
-    margin-top: -15vh;
+    padding-top: 75vh;
     font-size: 24px;
   }
 `;
 
-const Title = styled.p`
+const Title = styled(motion.p)`
   font-size: 96px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 24px;
 
   span {
     display: block;
@@ -86,12 +86,11 @@ const Title = styled.p`
   }
 
   @media only screen and (max-width: 700px){
-    margin-top: 136px;
     font-size: 32px;
   }
 `;
 
-const SubTitle = styled.p`
+const SubTitle = styled(motion.p)`
   font-size: 24px;
   font-weight: bold;
 
@@ -100,7 +99,7 @@ const SubTitle = styled.p`
   }
 `;
 
-const ToAbout = styled.div`
+const ToAbout = styled(motion.div)`
   cursor: pointer;
   margin-top: 16px;
   padding: 8px;
@@ -120,7 +119,54 @@ const ToAbout = styled.div`
     font-size: 16px;
   }
 `
+//애니메이션
+const copyAnime = {
+  inital: {
+      opacity: 0,
+      y: 20,
+  },
 
+  visible: {
+      opacity: 1,
+      y:0,
+      transition: {
+          type:"linear",
+          ease:"easeOut",
+          duration: 0.5,
+          staggerChildren: 0.2,
+      }
+  },
+
+  hidden: {
+      opacity: 0,
+      y: -20,
+  }
+}
+
+const childAnime = {
+  inital: {
+    opacity: 0,
+    y: 20,
+  },
+
+  visible: {
+      opacity: 1,
+      y:0,
+      transition: {
+          type:"linear",
+          ease:"easeOut",
+          duration: 1,
+      }
+  },
+
+  hidden: {
+      opacity: 0,
+      y: -20,
+  }
+}
+
+
+//함수
 const scrollToTop = () => {
   window.scrollTo({top:0} )
 }
@@ -158,21 +204,24 @@ function Home() {
     {/* <NavLocal /> */}
     <Container>
       <MainBanner />
-
-      <Copy>
-          <Title>
-            <span>88개가 넘는 이모지.</span>
-            <span>이 모든 것이 모두 무료.</span>
-          </Title>
-          <SubTitle>
-            Designed by 이윤규
-          </SubTitle>
-          <Link to="about" onClick={scrollToTop}>
-            <ToAbout>
-              궁금하다면? 👉
-            </ToAbout>
-          </Link>
-      </Copy>
+      <AnimatePresence>
+        <Copy variants={copyAnime} initial="inital" animate="visible" exit="hidden">
+            <Title variants={childAnime}>
+              <span>88개가 넘는 이모지.</span>
+            </Title>
+            <Title variants={childAnime}>
+              <span>이 모든 것이 모두 무료.</span>
+            </Title>
+            <SubTitle variants={childAnime}>
+              Designed by 윤엑스
+            </SubTitle>
+            <Link to="about" onClick={scrollToTop}>
+              <ToAbout variants={childAnime}>
+                과정이 궁금하다면? 👉
+              </ToAbout>
+            </Link>
+        </Copy>
+      </AnimatePresence>
       <BoxGrid>
         <>
           {isLoading ? <Loader/> :
