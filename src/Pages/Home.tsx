@@ -91,6 +91,7 @@ const Title = styled(motion.p)`
 `;
 
 const SubTitle = styled(motion.p)`
+  margin-top: 16px;
   font-size: 24px;
   font-weight: bold;
 

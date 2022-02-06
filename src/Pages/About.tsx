@@ -167,7 +167,7 @@ function About() {
         <Br/>
         <Box>
           <SubTitle>
-                <Bold>포트폴리오 여정기</Bold>
+                <Bold>어떻게 만들었나요?</Bold>
           </SubTitle>
           <ToonImg src={img_05} />
           <ToonImg src={img_06} />
