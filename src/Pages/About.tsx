@@ -36,7 +36,7 @@ const Container = styled.div`
 
   animation-name: ${show};
   animation-delay: 0.2s;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 `
