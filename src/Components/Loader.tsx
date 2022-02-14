@@ -48,11 +48,14 @@ const Box = styled.div`
 
 function Loader() {
   return <>
-    {[...Array(8)].map((n, index) => {
-        return (
-          <Box style={{animationDelay: `0.${n}s`}}/>
-        )
-    })}
+    <Box style={{animationDelay: "0.1s"}}/>
+    <Box style={{animationDelay: "0.2s"}}/>
+    <Box style={{animationDelay: "0.3s"}}/>
+    <Box style={{animationDelay: "0.4s"}}/>
+    <Box style={{animationDelay: "0.5s"}}/>
+    <Box style={{animationDelay: "0.6s"}}/>
+    <Box style={{animationDelay: "0.7s"}}/>
+    <Box style={{animationDelay: "0.8s"}}/>
   </>;
 }
 
